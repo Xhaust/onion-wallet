@@ -5,7 +5,7 @@
 
 ## Context
 
-Imagine Bank consists of multiple services that need to run together during development, including the frontend, backend and database.
+Onion Wallet consists of multiple services that need to run together during development, including the frontend, backend and database.
 
 Developers should be able to run the project in a consistent environment without manually installing and configuring every dependency.
 

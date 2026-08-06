@@ -1,6 +1,6 @@
 # Documentation
 
-This directory contains the technical documentation for Imagine Bank.
+This directory contains the technical documentation for Onion Wallet.
 
 ## Structure
 

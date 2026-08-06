@@ -5,7 +5,7 @@
 
 ## Context
 
-Imagine Bank is a personal project developed by a two-person team.
+Onion Wallet is a personal project developed by a two-person team.
 
 The application is expected to grow over time with features such as authentication, accounts, transactions, budgets, analytics and reporting. The architecture should remain easy to understand, maintain and deploy while avoiding unnecessary complexity.
 

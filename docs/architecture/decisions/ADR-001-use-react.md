@@ -5,7 +5,7 @@
 
 ## Context
 
-Imagine Bank requires a modern single-page application (SPA) with strong TypeScript support, maintainability, and a mature ecosystem.
+Onion Wallet requires a modern single-page application (SPA) with strong TypeScript support, maintainability, and a mature ecosystem.
 
 ## Decision
 

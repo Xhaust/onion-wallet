@@ -5,7 +5,7 @@
 
 ## Context
 
-Imagine Bank requires a secure and maintainable backend that exposes a REST API for the frontend.
+Onion Wallet requires a secure and maintainable backend that exposes a REST API for the frontend.
 
 The backend should provide:
 

@@ -9,8 +9,8 @@
 ## Clone the Repository
 
 ```bash
-git clone https://github.com/Xhaust/imagine-bank
-cd imagine-bank
+git clone https://github.com/Xhaust/onion-wallet
+cd onion-wallet
 ```
 
 ## Frontend

@@ -5,7 +5,7 @@
 
 ## Context
 
-Imagine Bank requires a relational database to store users, accounts, transactions, budgets and other financial data.
+Onion Wallet requires a relational database to store users, accounts, transactions, budgets and other financial data.
 
 The solution should support local development and cloud deployment.
 

@@ -2,7 +2,7 @@
 
 ## Architecture Style
 
-Imagine Bank follows a modular monolith architecture.
+Onion Wallet follows a modular monolith architecture.
 
 ## Components
 

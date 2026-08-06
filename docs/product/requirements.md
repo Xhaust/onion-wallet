@@ -2,7 +2,7 @@
 
 ## Overview
 
-Imagine Bank is a personal finance application that helps users manage their financial activity by tracking accounts, transactions, budgets and financial goals.
+Onion Wallet is a personal finance application that helps users manage their financial activity by tracking accounts, transactions, budgets and financial goals.
 
 ## Goals
 

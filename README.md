@@ -1,10 +1,10 @@
-# Imagine Bank
+# Onion Wallet
 
 A modern personal finance web application built with a production-oriented architecture.
 
 ## Overview
 
-Imagine Bank is a full-stack web application that helps users manage their personal finances through a clean and intuitive interface.
+Onion Wallet is a full-stack web application that helps users manage their personal finances through a clean and intuitive interface.
 
 The project is being developed as a collaborative learning experience while following industry best practices in software architecture, documentation, testing, and deployment.
 
