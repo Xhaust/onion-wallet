@@ -79,8 +79,17 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': env.str('PGDATABASE'),
+        'USER': env.str('PGUSER'),
+        'PASSWORD': env.str('PGPASSWORD'),
+        'HOST': env.str('PGHOST'),
+        'PORT': env.str('PGPORT', 5432),
+        'OPTIONS': {
+            'sslmode': 'require',
+        },
+        'DISABLE_SERVER_SIDE_CURSORS': True,
+        'CONN_HEALTH_CHECKS': True,
     }
 }
 
