@@ -87,7 +87,7 @@ DATABASES = {
         'PORT': env.str('PGPORT', 5432),
         'OPTIONS': {
             'sslmode': env.str('PGSSLMODE', default='require'),
-        }
+        },
         'DISABLE_SERVER_SIDE_CURSORS': True,
         'CONN_HEALTH_CHECKS': True,
     }
