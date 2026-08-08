@@ -24,7 +24,7 @@ media/
 !.vscode/extensions.json
 .idea
 .DS_Store
-.env*
+.env
 *.suo
 *.ntvs*
 *.njsproj
