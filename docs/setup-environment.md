@@ -5,6 +5,7 @@
 - Git
 - Node.js
 - Python
+- Docker
 
 ## Clone the Repository
 
@@ -13,7 +14,31 @@ git clone https://github.com/Xhaust/onion-wallet
 cd onion-wallet
 ```
 
-## Frontend
+## Docker
+
+Start the development environment:
+
+```bash
+docker compose up --build
+```
+
+The services are available at:
+
+- Frontend: `http://localhost:5173`
+- Backend: `http://localhost:8000`
+- PostgreSQL: `localhost:5432`
+
+To stop the environment:
+
+```bash
+docker compose down
+```
+
+## Manual Setup
+
+Docker is the recommended development environment. The frontend and backend can also be run directly on the host.
+
+### Frontend
 
 ```bash
 cd frontend
@@ -21,7 +46,7 @@ npm install
 npm run dev
 ```
 
-## Backend
+### Backend
 
 ```bash
 cd backend
@@ -31,6 +56,16 @@ pip install -r requirements.txt
 python manage.py runserver
 ```
 
-## Docker
+## Environment Variables
 
-Docker support is planned but not yet configured.
+Create a local `.env` file from the example:
+
+```bash
+cp .env.example .env
+```
+
+Update the values in `.env` with your local configuration.
+
+The `.env` file contains local configuration and secrets and must not be committed to the repository.
+
+`.env.example` contains the required environment variables without real secrets and is committed to the repository as a template.
