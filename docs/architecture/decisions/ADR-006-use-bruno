@@ -1,0 +1,37 @@
+# ADR-006: Use Bruno for API Testing
+
+* **Status:** Accepted
+* **Date:** 2026-08-11
+
+## Context
+
+Onion Wallet exposes a backend API that needs to be tested during development.
+
+Developers need a simple way to send HTTP requests, inspect responses, and manually verify API behavior.
+
+## Decision
+
+Bruno will be used as the API client for development and manual API testing.
+
+## Rationale
+
+Bruno was selected because:
+
+* It provides a simple interface for sending HTTP requests.
+* API requests can be stored and version-controlled with the project.
+* It works well with Git-based workflows.
+* It is lightweight and easy to use during backend development.
+
+## Consequences
+
+### Positive
+
+* API requests are stored alongside the project.
+* Easy to reproduce and share API requests.
+* Convenient for manual API testing.
+* Integrates well with the development workflow.
+
+### Negative
+
+* Adds another development tool to the project.
+* API collections require maintenance as the backend API changes.
