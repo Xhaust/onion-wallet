@@ -1,0 +1,57 @@
+opencollection: 1.0.0
+
+info:
+  name: Onion Wallet API
+config:
+  proxy:
+    inherit: true
+    config:
+      protocol: http
+      hostname: ""
+      port: ""
+      auth:
+        username: ""
+        password: ""
+      bypassProxy: ""
+
+docs:
+  content: |
+    # Onion Wallet API
+
+    ## Overview
+
+    This collection contains requests for testing the Onion Wallet backend API during development.
+
+    It is intended for manual API testing and verifying backend behavior.
+
+    ## API
+
+    The collection currently includes requests for:
+
+    * Core Health and Database checks
+    * User Registrations
+
+    Refer to the individual requests for their endpoints, parameters, request bodies, and expected responses.
+
+    ## Usage
+
+    Start the Onion Wallet backend before running requests.
+
+    The development API is available at:
+
+    ```text
+    http://localhost:8000
+    ```
+
+    Requests in this collection can be used to verify API behavior during development.
+
+    ## Notes
+
+    Keep requests up to date when API endpoints or request/response formats change.
+  type: text/markdown
+bundled: false
+extensions:
+  bruno:
+    ignore:
+      - node_modules
+      - .git

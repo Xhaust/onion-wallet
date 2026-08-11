@@ -1,0 +1,32 @@
+info:
+  name: register_user
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{baseURL}}:{{port}}/api/users/register/"
+  body:
+    type: json
+    data: |-
+      {
+        "username": "testuser",
+        "email": "test@example.com",
+        "password": "TestPassword123!",
+        "password_confirm": "TestPassword123!"
+      }
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: tests
+      code: |-
+        test("201 Created", function () {
+          expect(res.getStatus()).to.equal(201);
+        });
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
