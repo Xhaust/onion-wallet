@@ -1,7 +1,8 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
-from .serializers import RegistrationSerializer
+from django.contrib.auth import authenticate, login
+from .serializers import RegistrationSerializer, LoginSerializer
 
 @api_view(['POST'])
 def registration_view(request):
@@ -18,3 +19,29 @@ def registration_view(request):
         status=status.HTTP_201_CREATED
     )
     
+@api_view(['POST'])
+def login_view(request):
+    serializer = LoginSerializer(data=request.data)
+    serializer.is_valid(raise_exception=True)
+    user = authenticate(
+        request, 
+        username=serializer.validated_data['username'],
+        password=serializer.validated_data['password']
+    )
+
+    if user is None:
+        return Response(
+            {
+                'detail': 'Invalid credentials.'
+            },
+            status=status.HTTP_401_UNAUTHORIZED
+        )
+
+    login(request, user)
+
+    return Response(
+        {
+            'detail': 'Login successful.'
+        },
+        status=status.HTTP_200_OK
+    )
