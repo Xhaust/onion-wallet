@@ -1,11 +1,15 @@
-import './App.css'
-
+import { BrowserRouter, Routes, Route } from "react-router";
+import { RegisterPage } from "./pages/RegisterPage";
+import { LoginPage } from "./pages/LoginPage";
 function App() {
   return (
-    <div>
-      <h1>Onion Wallet</h1>
-    </div>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/login" element={<LoginPage />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App
