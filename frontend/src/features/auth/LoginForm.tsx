@@ -15,6 +15,7 @@ export function LoginForm() {
       });
 
       console.log("Logged in successfully");
+      window.location.href = '/me'; 
     } catch (error) {
       console.error(error);
     }
