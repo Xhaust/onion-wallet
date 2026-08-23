@@ -1,0 +1,30 @@
+info:
+  name: login_user
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{baseURL}}:{{port}}/api/users/login/"
+  body:
+    type: json
+    data: |-
+      {
+        "username": "testuser",
+        "password": "TestPassword123!"
+      }
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: tests
+      code: |-
+        test("200 OK", function () {
+          expect(res.getStatus()).to.equal(200);
+        });
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

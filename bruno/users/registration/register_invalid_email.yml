@@ -1,0 +1,35 @@
+info:
+  name: register_invalid_email
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{baseURL}}:{{port}}/api/users/register/"
+  body:
+    type: json
+    data: |-
+      {
+        "username": "testuser",
+        "email": "test.com",
+        "password": "TestPassword123!",
+        "password_confirm": "TestPassword123"
+      }
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: tests
+      code: |-
+        test("400 Bad Request", function () {
+          expect(res.getStatus()).to.equal(400);
+        });
+        test("Message is correct", function () {
+          expect(res.getBody().email[0]).to.equal("Enter a valid email address.");
+        });
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,8 @@
+name: local
+variables:
+  - name: baseURL
+    value: http://localhost
+    description: The root web address of the target API server. It defines the base protocol and host domain where all endpoint paths are appended.
+  - name: port
+    value: "8000"
+    description: The specific digital doorway on the host machine where the API service is listening for incoming traffic.
